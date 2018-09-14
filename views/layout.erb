@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+  <link rel="icon" href="/images/cupcake-favicon.jpg" type="image/gif">
+  <!-- <link rel="icon" type="image/x-icon" href="public/images/favicon.ico"> -->
+  <link rel="stylesheet" href="/main.css">
+  <script src="/main.js" defer></script>
+  <title>Georgie Porgie's Pies</title>
+</head>
+<body>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper teal lighten-4">
+        <a href="" class="brand-logo"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/cakes">Cakes</a>
+          </li>
+          <li>
+            <a href="/cupcakes">Cupcakes</a>
+          </li>
+          <li>
+            <a href="/muffins">Muffins</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+
+
+  <%= yield %>
+  <footer class="page-footer teal lighten-4">
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col l6">
+          <h5 class="white-text">Join our Newsletter</h5>
+          <div class="input-field col l6">
+            <i class="material-icons prefix">email</i>
+            <input id="icon_email" type="email" class="validate">
+            <label for="icon_email">Email</label>
+            <button id="btn" class="btn1"><i class="fa fa-subscribe"></i> Subscribe</button>
+          </div>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="/contact">Contact Us</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.instagram.com">Instagram</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.twitter.com">Twitter</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="http://www.facebook.com">Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- </div> -->
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
