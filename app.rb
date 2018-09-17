@@ -27,9 +27,9 @@ erb (:index)
 end
 
 post "/contact" do
-  from = Email.new(email: 'GARTH.PUCKERIN@gmail.com')
+  from = Email.new(email: 'garth.puckerin@gmail.com')
   to = Email.new(email: params[:email_address])
-  subject = 'Thank you'
+  subject = 'Thank you for joing our mailing list'
   content = Content.new(
     type: 'text/HTML', 
     value: params[:comment]
@@ -40,7 +40,7 @@ post "/contact" do
   
   # sets up the api key
   sg = SendGrid::API.new(
-    api_key: ENV["sendgrid_key"]
+    api_key: ENV["SENDGRID_API_KEY"]
   )
   
   # sends the email
