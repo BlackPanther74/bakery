@@ -20,19 +20,25 @@ get '/cupcakes' do
   erb :cupcakes
 end
 
-get "/contct" do  
+get "/signup" do  
   puts ENV["SENDGRID_API_KEY"]
   
-erb (:index)
+erb :contact
 end
 
-post "/contact" do
+get '/catalog' do
+  erb :catalog
+end
+
+post "/signup" do
   from = Email.new(email: 'garth.puckerin@gmail.com')
   to = Email.new(email: params[:email_address])
   subject = 'Thank you for joing our mailing list'
   content = Content.new(
     type: 'text/HTML', 
-    value: params[:comment]
+  #   value: params[:comment]
+  # )
+  value: erb(:catalog)
   )
   
   # create mail object with from, subject, to and content
@@ -56,5 +62,5 @@ post "/contact" do
   puts response.headers
   
 
-erb (:contact)
+erb (:index)
 end
